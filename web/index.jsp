@@ -11,6 +11,8 @@
     <title>$Title$</title>
   </head>
   <body>
-  $END$
+  <form action="index.do" method="get">
+    <input type="submit" value="submit"/>
+  </form>
   </body>
 </html>

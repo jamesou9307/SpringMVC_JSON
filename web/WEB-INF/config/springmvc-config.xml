@@ -14,8 +14,16 @@
     <context:component-scan base-package="com.james.springmvc.controller"/>
     <context:component-scan base-package="com.james.springmvc.service"/>
 
-    <mvc:resources mapping="*.html" location="/WEB-INF/pages"/>
+    <!--location表示webapp目录下WEB-INF/pages下所有的文件-->
+    <!--mapping表示以/pages/*.html的请求路径-->
+    <mvc:resources mapping="/pages/*.html" location="/WEB-INF/pages/"/>
+    <mvc:resources mapping="js/*.js" location="/js/"/>
     <mvc:annotation-driven/>
+
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/pages/"/>
+        <property name="suffix" value=".html"/>
+    </bean>
 
 
 

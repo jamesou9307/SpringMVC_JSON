@@ -21,6 +21,12 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+
+    @RequestMapping(value = "/index.do")
+    public String index() {
+        return "123";
+    }
+
     @ResponseBody
     @RequestMapping(value = "/get_json")
     public String toJson(){
